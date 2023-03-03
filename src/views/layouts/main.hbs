@@ -1,0 +1,36 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Favorite Links</title>
+    <meta name='author' content='Sairi Conejo Flores' />
+    <meta
+      name='keywords'
+      content='sairi conejo flores, cxdetest, app, js, node, passport, mysql, bcryptjs, express, portfolio'
+    />
+    <link rel='stylesheet' href='/css/styles.css' />
+  </head>
+  <body>
+
+    <header>
+      <a href='/profile'>
+        <h2>Favorite Links</h2>
+      </a>
+
+      <nav class='navbar'>
+        {{#if user}}
+          <a href='/profile'>{{user.username}}</a>
+          <a href='/links'>Links</a>
+          <a href='/logout'>Logout</a>
+        {{else}}
+          <a href='/signin'>Sign in</a>
+          <a href='signup'>Sign up</a>
+        {{/if}}
+      </nav>
+    </header>
+
+    {{{body}}}
+
+  </body>
+</html>

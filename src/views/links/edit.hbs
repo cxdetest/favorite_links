@@ -1,0 +1,31 @@
+<form action='/links/edit/{{link.id}}' method='POST'>
+  <fieldset>
+    <legend>Create</legend>
+    <input
+      type='text'
+      name='title'
+      value='{{link.title}}'
+      placeholder='title'
+      autocomplete='off'
+      required
+    />
+    <input
+      type='url'
+      name='url'
+      value='{{link.url}}'
+      placeholder='url'
+      autocomplete='off'
+      required
+    />
+
+    <textarea
+      name='description'
+      rows='2'
+      autocomplete='off'
+      placeholder='description'
+      required
+    >{{link.description}}</textarea>
+
+    <button type='submit'>Update</button>
+  </fieldset>
+</form>

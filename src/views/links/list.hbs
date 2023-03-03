@@ -1,0 +1,18 @@
+<section class='links-container'>
+  {{#each links}}
+    <span>
+      <a href='{{url}}' target='_blank'>
+        <h3>{{title}}</h3>
+      </a>
+      <p>{{description}}</p>
+      <sub>{{timeago created_at}}</sub>
+      <a class='btn' href='/links/{{id}}'>Delete</a>
+      <a class='btn' href='/links/edit/{{id}}'>Edit</a>
+    </span>
+  {{else}}
+    <span>
+      <p>There are not Links saved yet.</p>
+      <a class='btn' href='/links/add'>Create One!</a>
+    </span>
+  {{/each}}
+</section>

@@ -1,0 +1,29 @@
+<form action='/links/add' method='POST'>
+  <fieldset>
+    <legend>Create</legend>
+    <input
+      type='text'
+      name='title'
+      placeholder='title'
+      autocomplete='off'
+      required
+    />
+    <input
+      type='url'
+      name='url'
+      placeholder='url'
+      autocomplete='off'
+      required
+    />
+
+    <textarea
+      name='description'
+      rows='2'
+      autocomplete='off'
+      placeholder='description'
+      required
+    ></textarea>
+
+    <button type='submit'>Create</button>
+  </fieldset>
+</form>

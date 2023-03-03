@@ -1,0 +1,34 @@
+CREATE DATABASE favorite_links;
+
+USE favorite_links;
+
+CREATE TABLE users (
+  id INT(11) NOT NULL,
+  username VARCHAR(20) NOT NULL,
+  password VARCHAR(60) NOT NULL,
+  fullname VARCHAR(100) NOT NULL,
+ PRIMARY KEY (id)
+);
+
+DESCRIBE users;
+
+ALTER TABLE users MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+DESCRIBE users;
+
+CREATE TABLE links (
+  id INT(11) NOT NULL,
+  title VARCHAR(150) NOT NULL,
+  url VARCHAR(255) NOT NULL,
+  description TEXT,
+  userID INT,
+  created_at TIMESTAMP NOT NULL DEFAULT current_timestamp,
+ PRIMARY KEY (id),
+ CONSTRAINT fk_user FOREIGN KEY (userID) REFERENCES users(id)
+);
+
+DESCRIBE users;
+
+ALTER TABLE links MODIFY id INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+DESCRIBE users;
